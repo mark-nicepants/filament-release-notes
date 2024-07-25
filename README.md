@@ -1,4 +1,4 @@
-# A filamentphp plugin for creating and displaying beautifull release note / changelog pages
+# A filamentphp plugin for creating and displaying beautiful release note / changelog pages
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mark-nicepants/filament-release-notes.svg?style=flat-square)](https://packagist.org/packages/mark-nicepants/filament-release-notes)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/mark-nicepants/filament-release-notes/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/mark-nicepants/filament-release-notes/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -6,14 +6,6 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/mark-nicepants/filament-release-notes.svg?style=flat-square)](https://packagist.org/packages/mark-nicepants/filament-release-notes)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/filament-release-notes.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/filament-release-notes)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
