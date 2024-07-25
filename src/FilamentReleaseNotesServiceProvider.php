@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Mark Mooibroek\FilamentReleaseNotes;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use Mark Mooibroek\FilamentReleaseNotes\Commands\FilamentReleaseNotesCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class FilamentReleaseNotesServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('filament-release-notes')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_migration_table_name_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_filament_release_notes_table')
+            ->hasCommand(FilamentReleaseNotesCommand::class);
     }
 }
