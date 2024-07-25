@@ -1,16 +1,16 @@
 <?php
 
-namespace Mark Mooibroek\FilamentReleaseNotes\Facades;
+namespace Nicepants\FilamentReleaseNotes\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Mark Mooibroek\FilamentReleaseNotes\FilamentReleaseNotes
+ * @see \Nicepants\FilamentReleaseNotes\FilamentReleaseNotes
  */
 class FilamentReleaseNotes extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Mark Mooibroek\FilamentReleaseNotes\FilamentReleaseNotes::class;
+        return \Nicepants\FilamentReleaseNotes\FilamentReleaseNotes::class;
     }
 }

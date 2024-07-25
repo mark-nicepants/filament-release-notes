@@ -2,7 +2,7 @@
     "name": "mark-nicepants/filament-release-notes",
     "description": "A filamentphp plugin for creating and displaying beautifull release note / changelog pages",
     "keywords": [
-        "Mark Mooibroek",
+        "Nicepants",
         "laravel",
         "filament-release-notes"
     ],
@@ -10,7 +10,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Mark Mooibroek",
+            "name": "Nicepants",
             "email": "mark@mooibroek.dev",
             "role": "Developer"
         }
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Mark Mooibroek\\FilamentReleaseNotes\\": "src/",
-            "Mark Mooibroek\\FilamentReleaseNotes\\Database\\Factories\\": "database/factories/"
+            "Nicepants\\FilamentReleaseNotes\\": "src/",
+            "Nicepants\\FilamentReleaseNotes\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mark Mooibroek\\FilamentReleaseNotes\\Tests\\": "tests/",
+            "Nicepants\\FilamentReleaseNotes\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -72,10 +72,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mark Mooibroek\\FilamentReleaseNotes\\FilamentReleaseNotesServiceProvider"
+                "Nicepants\\FilamentReleaseNotes\\FilamentReleaseNotesServiceProvider"
             ],
             "aliases": {
-                "FilamentReleaseNotes": "Mark Mooibroek\\FilamentReleaseNotes\\Facades\\FilamentReleaseNotes"
+                "FilamentReleaseNotes": "Nicepants\\FilamentReleaseNotes\\Facades\\FilamentReleaseNotes"
             }
         }
     },

@@ -52,8 +52,8 @@ php artisan vendor:publish --tag="filament-release-notes-views"
 ## Usage
 
 ```php
-$filamentReleaseNotes = new Mark Mooibroek\FilamentReleaseNotes();
-echo $filamentReleaseNotes->echoPhrase('Hello, Mark Mooibroek!');
+$filamentReleaseNotes = new Nicepants\FilamentReleaseNotes();
+echo $filamentReleaseNotes->echoPhrase('Hello, Nicepants!');
 ```
 
 ## Testing
@@ -76,7 +76,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [Mark Mooibroek](https://github.com/mark-nicepants)
+- [Nicepants](https://github.com/mark-nicepants)
 - [All Contributors](../../contributors)
 
 ## License

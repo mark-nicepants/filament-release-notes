@@ -1,6 +1,6 @@
 <?php
 
-namespace Mark Mooibroek\FilamentReleaseNotes\Commands;
+namespace Nicepants\FilamentReleaseNotes\Commands;
 
 use Illuminate\Console\Command;
 

@@ -1,6 +1,6 @@
 <?php
 
-// config for Mark Mooibroek/FilamentReleaseNotes
+// config for Nicepants/FilamentReleaseNotes
 return [
 
 ];

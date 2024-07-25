@@ -1,10 +1,10 @@
 <?php
 
-namespace Mark Mooibroek\FilamentReleaseNotes;
+namespace Nicepants\FilamentReleaseNotes;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Mark Mooibroek\FilamentReleaseNotes\Commands\FilamentReleaseNotesCommand;
+use Nicepants\FilamentReleaseNotes\Commands\FilamentReleaseNotesCommand;
 
 class FilamentReleaseNotesServiceProvider extends PackageServiceProvider
 {

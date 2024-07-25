@@ -16,7 +16,7 @@
     backupStaticProperties="false"
 >
     <testsuites>
-        <testsuite name="Mark Mooibroek Test Suite">
+        <testsuite name="Nicepants Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

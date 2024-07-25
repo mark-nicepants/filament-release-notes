@@ -1,6 +1,6 @@
 <?php
 
-namespace Mark Mooibroek\FilamentReleaseNotes\Database\Factories;
+namespace Nicepants\FilamentReleaseNotes\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

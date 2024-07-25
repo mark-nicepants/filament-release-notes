@@ -1,5 +1,5 @@
 <?php
 
-use Mark Mooibroek\FilamentReleaseNotes\Tests\TestCase;
+use Nicepants\FilamentReleaseNotes\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

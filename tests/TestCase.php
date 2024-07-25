@@ -1,10 +1,10 @@
 <?php
 
-namespace Mark Mooibroek\FilamentReleaseNotes\Tests;
+namespace Nicepants\FilamentReleaseNotes\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Mark Mooibroek\FilamentReleaseNotes\FilamentReleaseNotesServiceProvider;
+use Nicepants\FilamentReleaseNotes\FilamentReleaseNotesServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Mark Mooibroek\\FilamentReleaseNotes\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Nicepants\\FilamentReleaseNotes\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

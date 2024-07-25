@@ -1,5 +1,5 @@
 <?php
 
-namespace Mark Mooibroek\FilamentReleaseNotes;
+namespace Nicepants\FilamentReleaseNotes;
 
 class FilamentReleaseNotes {}
