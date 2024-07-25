@@ -3,8 +3,8 @@
 namespace Nicepants\FilamentReleaseNotes\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Nicepants\FilamentReleaseNotes\FilamentReleaseNotesServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

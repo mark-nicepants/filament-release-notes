@@ -2,9 +2,9 @@
 
 namespace Nicepants\FilamentReleaseNotes;
 
+use Nicepants\FilamentReleaseNotes\Commands\FilamentReleaseNotesCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Nicepants\FilamentReleaseNotes\Commands\FilamentReleaseNotesCommand;
 
 class FilamentReleaseNotesServiceProvider extends PackageServiceProvider
 {
