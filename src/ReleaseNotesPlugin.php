@@ -9,6 +9,7 @@ use Filament\Support\Facades\FilamentView;
 use Filament\View\PanelsRenderHook;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Gate;
 use Nicepants\FilamentReleaseNotes\Widgets\ReleaseNotesWidget;
 
 class ReleaseNotesPlugin implements Plugin
@@ -20,6 +21,8 @@ class ReleaseNotesPlugin implements Plugin
      */
     public mixed $canManage = true;
 
+    public ?string $connection = null;
+
     /**
      * @var array<string, class-string>
      */
@@ -30,6 +33,11 @@ class ReleaseNotesPlugin implements Plugin
      */
     protected array $resources = [];
 
+    /**
+     * @var array<string, class-string>
+     */
+    protected array $policies = [];
+
     public static function make(): static
     {
         $instance = new static();
@@ -39,6 +47,7 @@ class ReleaseNotesPlugin implements Plugin
         $instance->canManage($config['can_manage']);
         $instance->overrideModels($config['models']);
         $instance->overrideResources($config['resources']);
+        $instance->overridePolicies($config['policies']);
 
         return $instance;
     }
@@ -59,6 +68,8 @@ class ReleaseNotesPlugin implements Plugin
         $panel
             ->widgets([ReleaseNotesWidget::make()])
             ->resources($this->resources);
+
+        Gate::policy($this->model('ReleaseNote'), $this->policy('ReleaseNote'));
     }
 
     public function boot(Panel $panel): void
@@ -102,8 +113,30 @@ class ReleaseNotesPlugin implements Plugin
         return $this;
     }
 
-    public function getModel(string $model): string
+    /**
+     * @param array<string,class-string> $overrides
+     */
+    public function overridePolicies(array $overrides): self
+    {
+        $policies = array_merge($this->policies, $overrides);
+        $this->policies = Arr::whereNotNull($policies);
+        return $this;
+    }
+
+    public function model(string $model): string
     {
         return $this->models[$model];
+    }
+
+    public function policy(string $model): string
+    {
+        return $this->policies[$model];
+    }
+
+    public function connection(string $connection): static
+    {
+        $this->connection = $connection;
+
+        return $this;
     }
 }

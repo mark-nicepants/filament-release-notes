@@ -26,7 +26,6 @@
         "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.1.1||^7.10.0",
         "larastan/larastan": "^2.9",
-        "orchestra/testbench": "^9.0.0||^8.22.0",
         "pestphp/pest": "^2.34",
         "pestphp/pest-plugin-arch": "^2.7",
         "pestphp/pest-plugin-laravel": "^2.3",
@@ -40,25 +39,7 @@
             "Nicepants\\FilamentReleaseNotes\\Database\\Factories\\": "database/factories/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Nicepants\\FilamentReleaseNotes\\Tests\\": "tests/",
-            "Workbench\\App\\": "workbench/app/"
-        }
-    },
     "scripts": {
-        "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-filament-release-notes --ansi",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "build": [
-            "@composer run prepare",
-            "@php vendor/bin/testbench workbench:build --ansi"
-        ],
-        "start": [
-            "Composer\\Config::disableProcessTimeout",
-            "@composer run build",
-            "@php vendor/bin/testbench serve"
-        ],
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",

@@ -1,12 +1,18 @@
 <?php
 
+use Nicepants\FilamentReleaseNotes\Models\ReleaseNote;
+use Nicepants\FilamentReleaseNotes\Policies\ReleaseNotePolicy;
+use Nicepants\FilamentReleaseNotes\Resources\ReleaseNoteResource;
+
 return [
     'models' => [
-        'ReleaseNote' => \Nicepants\FilamentReleaseNotes\Models\ReleaseNote::class,
+        'ReleaseNote' => ReleaseNote::class,
+    ],
+    'policies' => [
+        'ReleaseNote' => ReleaseNotePolicy::class,
     ],
     'resources' => [
-        'ReleaseNoteResource' => \Nicepants\FilamentReleaseNotes\Resources\ReleaseNoteResource::class,
+        'ReleaseNoteResource' => ReleaseNoteResource::class,
     ],
-
     'can_manage' => true,
 ];

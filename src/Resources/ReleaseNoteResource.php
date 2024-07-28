@@ -6,15 +6,17 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Nicepants\FilamentReleaseNotes\Models\ReleaseNote;
 use Nicepants\FilamentReleaseNotes\ReleaseNotesPlugin;
 use Nicepants\FilamentReleaseNotes\Resources\ReleaseNoteResource\Pages;
 
 class ReleaseNoteResource extends Resource
 {
-    protected static ?string $model = ReleaseNote::class;
+    public static function getModel(): string
+    {
+        return ReleaseNotesPlugin::get()->model('ReleaseNote');
+    }
 
-    protected static ?string $navigationIcon = 'heroicon-o-circle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-sparkles';
 
     public static function shouldRegisterNavigation(): bool
     {
