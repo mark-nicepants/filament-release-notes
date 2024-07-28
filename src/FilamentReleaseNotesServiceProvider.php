@@ -21,7 +21,6 @@ class FilamentReleaseNotesServiceProvider extends PackageServiceProvider
             ->hasMigration('create_filament_release_notes_table');
     }
 
-
     public function packageBooted(): void
     {
         FilamentAsset::register([
