@@ -2,13 +2,12 @@
 
 namespace Nicepants\FilamentReleaseNotes\Policies;
 
-use Nicepants\FilamentReleaseNotes\ReleaseNotesPlugin;
+use Nicepants\FilamentReleaseNotes\FilamentReleaseNotesPlugin;
 
 class ReleaseNotePolicy
 {
-
     public function viewAny(): bool
     {
-        return ReleaseNotesPlugin::get()->getCanManage();
+        return FilamentReleaseNotesPlugin::get()->getCanManage();
     }
 }

@@ -8,11 +8,12 @@ use Filament\Support\Concerns\EvaluatesClosures;
 use Filament\Support\Facades\FilamentView;
 use Filament\View\PanelsRenderHook;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Gate;
 use Nicepants\FilamentReleaseNotes\Widgets\ReleaseNotesWidget;
 
-class ReleaseNotesPlugin implements Plugin
+class FilamentReleaseNotesPlugin implements Plugin
 {
     use EvaluatesClosures;
 
@@ -114,16 +115,17 @@ class ReleaseNotesPlugin implements Plugin
     }
 
     /**
-     * @param array<string,class-string> $overrides
+     * @param  array<string,class-string>  $overrides
      */
     public function overridePolicies(array $overrides): self
     {
         $policies = array_merge($this->policies, $overrides);
         $this->policies = Arr::whereNotNull($policies);
+
         return $this;
     }
 
-    public function model(string $model): string
+    public function model(string $model): string | Model
     {
         return $this->models[$model];
     }
