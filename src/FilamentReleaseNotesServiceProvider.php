@@ -2,24 +2,29 @@
 
 namespace Nicepants\FilamentReleaseNotes;
 
-use Nicepants\FilamentReleaseNotes\Commands\FilamentReleaseNotesCommand;
+use Filament\Support\Assets\Css;
+use Filament\Support\Facades\FilamentAsset;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FilamentReleaseNotesServiceProvider extends PackageServiceProvider
 {
+    public static string $name = 'filament-release-notes';
+
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package
-            ->name('filament-release-notes')
+            ->name(static::$name)
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_filament_release_notes_table')
-            ->hasCommand(FilamentReleaseNotesCommand::class);
+            ->hasMigration('create_filament_release_notes_table');
+    }
+
+
+    public function packageBooted(): void
+    {
+        FilamentAsset::register([
+            Css::make('release-notes', __DIR__ . '/../resources/dist/release-notes.css')->loadedOnRequest(),
+        ], 'mark-nicepants/filament-release-notes');
     }
 }

@@ -1,0 +1,9 @@
+{
+    "private": true,
+    "scripts": {
+        "build": "npx tailwindcss -o ./resources/dist/release-notes.css"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.4.7"
+    }
+}

@@ -6,14 +6,19 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    public function up()
+    public function up(): void
     {
-        Schema::create('filament_release_notes_table', function (Blueprint $table) {
+        Schema::create('release_notes', function (Blueprint $table) {
             $table->id();
-
-            // add fields
-
             $table->timestamps();
+
+            $table->string('version');
+            $table->text('notes');
         });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('release_notes');
     }
 };
