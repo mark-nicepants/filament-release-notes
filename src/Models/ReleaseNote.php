@@ -12,7 +12,7 @@ class ReleaseNote extends Model
     public function getConnectionName(): ?string
     {
         $connection = ReleaseNotesPlugin::get()->connection;
+
         return $connection ?: parent::getConnectionName();
     }
-
 }

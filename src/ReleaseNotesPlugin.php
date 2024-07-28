@@ -114,12 +114,13 @@ class ReleaseNotesPlugin implements Plugin
     }
 
     /**
-     * @param array<string,class-string> $overrides
+     * @param  array<string,class-string>  $overrides
      */
     public function overridePolicies(array $overrides): self
     {
         $policies = array_merge($this->policies, $overrides);
         $this->policies = Arr::whereNotNull($policies);
+
         return $this;
     }
 
