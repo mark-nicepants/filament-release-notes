@@ -32,7 +32,7 @@ class ReleaseNotesPlugin implements Plugin
 
     public static function make(): static
     {
-        $instance = new static();
+        $instance = new static;
 
         $config = config('filament-release-notes');
 
@@ -53,7 +53,6 @@ class ReleaseNotesPlugin implements Plugin
         return FilamentReleaseNotesServiceProvider::$name;
     }
 
-
     public function register(Panel $panel): void
     {
         $panel
@@ -65,12 +64,11 @@ class ReleaseNotesPlugin implements Plugin
     {
         FilamentView::registerRenderHook(
             PanelsRenderHook::GLOBAL_SEARCH_BEFORE,
-            fn(): View => view('filament-release-notes::version-badge'),
+            fn (): View => view('filament-release-notes::version-badge'),
         );
     }
 
-
-    public function canManage(bool|\Closure $condition = true): static
+    public function canManage(bool | \Closure $condition = true): static
     {
         $this->canManage = $condition;
 
@@ -79,26 +77,28 @@ class ReleaseNotesPlugin implements Plugin
 
     public function getCanManage(): bool
     {
-        return (bool)$this->evaluate($this->canManage);
+        return (bool) $this->evaluate($this->canManage);
     }
 
     /**
-     * @param array<string,class-string|null> $overrides
+     * @param  array<string,class-string|null>  $overrides
      */
     public function overrideResources(array $overrides): self
     {
         $resources = array_merge($this->resources, $overrides);
         $this->resources = Arr::whereNotNull($resources);
+
         return $this;
     }
 
     /**
-     * @param array<string,class-string> $overrides
+     * @param  array<string,class-string>  $overrides
      */
     public function overrideModels(array $overrides): self
     {
         $models = array_merge($this->models, $overrides);
         $this->models = Arr::whereNotNull($models);
+
         return $this;
     }
 
