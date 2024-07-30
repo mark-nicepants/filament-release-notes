@@ -34,15 +34,15 @@ class ReleaseNoteResource extends Resource
 
                 Section::make('Information')->schema([
                     TextInput::make('created_at')
-                        ->formatStateUsing(fn($state) => \Carbon\Carbon::parse($state)->format('Y-m-d H:i:s'))
+                        ->formatStateUsing(fn ($state) => \Carbon\Carbon::parse($state)->format('Y-m-d H:i:s'))
                         ->default(now()->format('Y-m-d H:i:s')),
 
                     TextInput::make('version')
                         ->prefix('v')
                         ->default(ReleaseNote::latest()?->version ?? '1.0.0')
                         ->helperText('The version number of the release. Example: "v1.0.0".')
-                        ->rules(fn(): \Closure => function ($attribute, $value, $fail) {
-                            if (!preg_match('/^\d+\.\d+\.\d+$/', $value)) {
+                        ->rules(fn (): \Closure => function ($attribute, $value, $fail) {
+                            if (! preg_match('/^\d+\.\d+\.\d+$/', $value)) {
                                 $fail('The version must be in the format "vX.Y.Z".');
                             }
                         }),
@@ -78,7 +78,7 @@ class ReleaseNoteResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\DeleteAction::make()
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

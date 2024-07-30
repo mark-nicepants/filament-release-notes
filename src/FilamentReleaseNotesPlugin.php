@@ -79,11 +79,11 @@ class FilamentReleaseNotesPlugin implements Plugin
     {
         FilamentView::registerRenderHook(
             PanelsRenderHook::GLOBAL_SEARCH_BEFORE,
-            fn(): View => view('filament-release-notes::version-badge'),
+            fn (): View => view('filament-release-notes::version-badge'),
         );
     }
 
-    public function canManage(bool|\Closure $condition = true): static
+    public function canManage(bool | \Closure $condition = true): static
     {
         $this->canManage = $condition;
 
@@ -92,7 +92,7 @@ class FilamentReleaseNotesPlugin implements Plugin
 
     public function getCanManage(): bool
     {
-        return (bool)$this->evaluate($this->canManage);
+        return (bool) $this->evaluate($this->canManage);
     }
 
     public function timezone(string $timezone): static
@@ -108,7 +108,7 @@ class FilamentReleaseNotesPlugin implements Plugin
     }
 
     /**
-     * @param array<string,class-string|null> $overrides
+     * @param  array<string,class-string|null>  $overrides
      */
     public function overrideResources(array $overrides): self
     {
@@ -119,7 +119,7 @@ class FilamentReleaseNotesPlugin implements Plugin
     }
 
     /**
-     * @param array<string,class-string> $overrides
+     * @param  array<string,class-string>  $overrides
      */
     public function overrideModels(array $overrides): self
     {
@@ -130,7 +130,7 @@ class FilamentReleaseNotesPlugin implements Plugin
     }
 
     /**
-     * @param array<string,class-string> $overrides
+     * @param  array<string,class-string>  $overrides
      */
     public function overridePolicies(array $overrides): self
     {
@@ -140,7 +140,7 @@ class FilamentReleaseNotesPlugin implements Plugin
         return $this;
     }
 
-    public function model(string $model): string|Model
+    public function model(string $model): string | Model
     {
         return $this->models[$model];
     }

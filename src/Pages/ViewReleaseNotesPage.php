@@ -7,7 +7,6 @@ use Nicepants\FilamentReleaseNotes\Models\ReleaseNote;
 
 class ViewReleaseNotesPage extends Page
 {
-
     protected static string $view = 'filament-release-notes::view-release-notes-page';
 
     protected static ?string $title = 'Release Notes';
@@ -16,7 +15,7 @@ class ViewReleaseNotesPage extends Page
 
     protected function getViewData(): array
     {
-        return ["notes" => ReleaseNote::model()
+        return ['notes' => ReleaseNote::model()
             ->query()
             ->latest()
             ->paginate(),
