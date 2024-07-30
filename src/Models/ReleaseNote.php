@@ -23,7 +23,8 @@ class ReleaseNote extends Model
 
     public function getConnectionName(): ?string
     {
-        $connection = ReleaseNotesPlugin::get()->connection;
+        $connection = FilamentReleaseNotesPlugin::get()->connection;
+
         return $connection ?: parent::getConnectionName();
     }
 }
