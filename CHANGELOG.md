@@ -2,7 +2,9 @@
 
 All notable changes to `filament-release-notes` will be documented in this file.
 
-## [Unreleased](https://github.com/org/repo/compare/v1.0.0...HEAD)
+## v0.1.1 - 2024-08-09
+
+- Fix bug when no release notes are found in the database
 
 ## v0.1.0 - 2024-07-25
 
