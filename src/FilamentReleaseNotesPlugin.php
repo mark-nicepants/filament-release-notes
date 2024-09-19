@@ -68,7 +68,7 @@ class FilamentReleaseNotesPlugin implements Plugin
     public function register(Panel $panel): void
     {
         $panel
-            ->widgets([ReleaseNotesWidget::make()])
+            ->widgets([ReleaseNotesWidget::class])
             ->pages([Pages\ViewReleaseNotesPage::class])
             ->resources($this->resources);
 
