@@ -2,6 +2,10 @@
 
 All notable changes to `filament-release-notes` will be documented in this file.
 
+## v0.1.3 - 2025-05-09
+
+- Allow contracts v12 for Laravel 12 compatibility
+
 ## v0.1.2 - 2024-09-19
 
 - Fix bug when caching with release notes enabled
