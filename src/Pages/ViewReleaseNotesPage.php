@@ -7,7 +7,7 @@ use Nicepants\FilamentReleaseNotes\Models\ReleaseNote;
 
 class ViewReleaseNotesPage extends Page
 {
-    protected static string $view = 'filament-release-notes::view-release-notes-page';
+    protected string $view = 'filament-release-notes::view-release-notes-page';
 
     protected static ?string $title = 'Release Notes';
 

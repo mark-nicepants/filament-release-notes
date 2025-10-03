@@ -1,4 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@source "../views";
+
+@theme {
+  --important: .filament-release-notes;
+  --dark-mode: class;
+}
+
+@layer base {
+  /* Disable preflight */
+  *, ::before, ::after {
+    all: revert;
+  }
+}

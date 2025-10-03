@@ -2,11 +2,14 @@
 
 namespace Nicepants\FilamentReleaseNotes\Resources;
 
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\DeleteBulkAction;
 use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Nicepants\FilamentReleaseNotes\FilamentReleaseNotesPlugin;
@@ -20,16 +23,16 @@ class ReleaseNoteResource extends Resource
         return FilamentReleaseNotesPlugin::get()->model('ReleaseNote');
     }
 
-    protected static ?string $navigationIcon = 'heroicon-o-sparkles';
+    protected static \BackedEnum|string|null $navigationIcon = 'heroicon-o-sparkles';
 
     public static function shouldRegisterNavigation(): bool
     {
         return FilamentReleaseNotesPlugin::get()->getCanManage();
     }
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
+        return $schema
             ->schema([
 
                 Section::make('Information')->schema([
@@ -78,11 +81,11 @@ class ReleaseNoteResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\DeleteAction::make(),
+                DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }

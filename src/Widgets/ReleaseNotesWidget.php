@@ -13,5 +13,5 @@ class ReleaseNotesWidget extends Widget
     /**
      * @var view-string
      */
-    protected static string $view = 'filament-release-notes::release-notes-widget';
+    protected string $view = 'filament-release-notes::release-notes-widget';
 }
