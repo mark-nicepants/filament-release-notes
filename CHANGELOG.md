@@ -2,6 +2,16 @@
 
 All notable changes to `filament-release-notes` will be documented in this file.
 
+## v4.0.1 - 2026-05-05
+
+### Fixed
+- Removed duplicate Alpine Persist registration to prevent Livewire 3 / Filament 4 pages from throwing `$persist` redefinition errors
+- Restored package test bootstrap by autoloading the package test namespace for Pest
+
+### Changed
+- Updated the package development test stack to Laravel 12-compatible Pest and Testbench versions
+- Refreshed locked development dependencies for the package build and test environment
+
 ## v4.0.0 - 2025-10-03
 
 ### Added

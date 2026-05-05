@@ -25,18 +25,24 @@
     "require-dev": {
         "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.1.1||^7.10.0",
-        "larastan/larastan": "^2.9",
-        "pestphp/pest": "^2.34",
-        "pestphp/pest-plugin-arch": "^2.7",
-        "pestphp/pest-plugin-laravel": "^2.3",
+        "orchestra/testbench": "^10.2.1",
+        "larastan/larastan": "^3.8",
+        "pestphp/pest": "^3.8.2",
+        "pestphp/pest-plugin-arch": "^3.1.1",
+        "pestphp/pest-plugin-laravel": "^3.2.0",
         "phpstan/extension-installer": "^1.3",
-        "phpstan/phpstan-deprecation-rules": "^1.1",
-        "phpstan/phpstan-phpunit": "^1.3"
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0"
     },
     "autoload": {
         "psr-4": {
             "Nicepants\\FilamentReleaseNotes\\": "src/",
             "Nicepants\\FilamentReleaseNotes\\Database\\Factories\\": "database/factories/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nicepants\\FilamentReleaseNotes\\Tests\\": "tests/"
         }
     },
     "scripts": {
